@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Hind');
+*, html{font-size:16px;}
+/* body{background:url("logo.svg") no-repeat fixed right bottom / 193px 213px #fdfdfd;font-family:'abeezee',arial,sans-serif;} */
+body{
+	background-image: url("logo_blanc.png"),url("pattern.png");
+	background-position: right bottom, center center;
+	background-size: 100px 127px, cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	font-family: 'Hind', sans-serif;
+}
+
+*, *::before, *::after {box-sizing: border-box;}
+.clear, br{clear:both;}
+.erreurtab input{background:rgba(255,0,0,0.10); border-color:red;}
+.erreur{color:#ff0000;}
+.msgok{color:#06c306;}
+.left,.ui-tabs .ui-tabs-nav li,.ui-tabs .ui-tabs-nav .ui-tabs-anchor{	float:left;}
+
+a,table.ui-widget-content a{
+	color:#4c0e8c;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+}
+a:hover,
+a:focus {
+	outline: none;
+}
+header{}
+header div.header{height:55px;margin:0 auto;}
+
+header div.header h1{
+	font-size:1.5em;
+	padding:0.8em 0;
+	text-align:center;
+}
+header div.header h1 a{color:#fff;}
+
+header span.connect {background-color:#eef02d;padding:20px; position:absolute;}
+div#monsvg{width:80px;}
+nav {
+	line-height: 1;
+	margin: 0 auto 3em;
+}
+nav > ul {
+	align-items:center;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content:center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: left;
+}
+
+nav > ul > li {
+	display: block;
+	font-size:1.20em;
+	margin: 1em 0;
+	padding: 10px 15px;
+	position: relative;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+nav > ul li:last-child {
+	margin-right:0px;
+}
+nav > ul li:hover {
+  background: #4c0e8c;
+}
+
+nav > ul > li a{
+	display: block;
+	font-size: 1.05em;
+	font-weight: bold;
+	padding: 1em;
+	position:relative;
+	text-align:center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+nav > ul li:hover > a {
+	color:#fff;
+}
+nav > ul > li > a::before,
+nav > ul > li  > a::after {
+	border: 2px solid #d94f5c;
+	content: '';
+	height: 10px;
+	opacity: 0;
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+	transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+	width: 10px;
+}
+nav > ul > li > a::before {
+	border-width: 2px 0 0 2px;
+	left: 0;
+	top: 0;
+	-webkit-transform: translate3d(10px, 10px, 0);
+	transform: translate3d(10px, 10px, 0);
+}
+
+nav > ul > li > a::after {
+	bottom: 0;
+	border-width: 0 2px 2px 0;
+	right: 0;
+	-webkit-transform: translate3d(-10px, -10px, 0);
+	transform: translate3d(-10px, -10px, 0);
+}
+nav > ul > li.current > a::before,
+nav > ul > li.current > a::after {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+nav > ul li ul {
+	display:block;
+	left: 0;
+	margin-top:10px;
+	min-width: 100%;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	visibility: hidden;
+	-webkit-transiton: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-transition: opacity 0.2s;
+	z-index:5;
+}
+nav > ul li ul li { 
+	background: #30134f; 
+	color: #fff;
+	display: block; 
+}
+nav > ul li ul li a {  
+	color: #fff;
+}
+
+nav > ul li:hover ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+#content{
+	background-color:#fff;
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+	-moz-box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+	box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+	clear:both;
+	margin:0 auto;
+	padding:20px;
+	position:relative;
+	width:50%;
+}
+
+#content form {margin-bottom:10px;}
+#content form label{
+	display:block;
+	float:left;
+	margin:5px 5px 15px;
+	width:35%;
+}
+#content form input, #content form select,#content form textarea{
+	float:left;
+	margin:5px 5px 15px;
+	width:60%;
+}
+#content form input[type="radio"]{width:15px;}
+#content form input[type="radio"] + label{width:15%;}
+#content form textarea{width:60%;}
+#content input[type="submit"]{width:100px;}
+input[readonly="readonly"]{background:#eee;}
+option.type5{background:#e0ffce;}
+option.type4{background:#cedeff;}
+option.typeaxe{background:#ffced3;}
+#content h2{
+	color:#f39200;
+	font-size:1.2em;
+	margin:0.8em 0 1.2em 0;
+	text-align:center;
+}
+p.indication, p.resultat{
+	color:#00734a;
+	font-size:1em;
+	margin-bottom:16px;
+}
+span.obligatoire{color:#00734a;}
+p.erreur, p.resultat, p.msgok{margin-top:7px;}
+section > p.erreur,section > p.msgok{margin-bottom:16px;}
+
+#content ul li {
+	padding:15px;
+	width:100%; 
+}
+li.niveau1{margin-bottom:15px;}
+li.niveau1 > ul{border-left:2px solid #000;}
+#content li.niveau1 ul ul li{padding:5px 0 5px 15px;}
+ .ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {height: 300px;}
+p.retour{font-size:0.9em;margin:5px 0 10px 0;	}
+p.retour a:hover{text-decoration:underline;}
+div.tablo{
+	text-align:center;
+}
+
+div.tablo thead{
+	margin-right:15px;
+    vertical-align: middle;
+}
+
+div.tablo table tr td,div.tablo table tr th{border:1px solid #eee;vertical-align:middle; padding:10px;color:#000;	}
+div.tablo table tr{line-height:20px;}
+
+div.tablo table {background:none;position:relative;width:900px;}
+div.tablo table .prog,div.tablo table .num_delib,div.tablo table .type,div.tablo table .folio{width:100px;}
+div.tablo table .date{width:150px;}
+div.tablo table .lien{width:350px;}
+
+div.tablo tr.niveau1 td{background:green;}
+div.tablo tr.niveau2 td{background:lightgrey;}
+div.tablo tr.niveau3 td{background:orange;}
+.ui-icon{position:absolute; top:15px; right:5px;}
+table.ui-state-default .ui-icon{background-image: url("images/ui-icons_222222_256x240.png");}
+tr.identique{background-color:none;}
+tr.differente{background-color:#b8f0a2;}
+
+form.formulairesupp{display:inline-flex;}
+#content >div#tableau2{display:none;}
+#content form input.boutonsuppr{width:24px;height:24px;}
+
+.boutonlien{
+	background:#e57828;
+	color:#fff;
+	display:block;
+	font-weight:bold;
+	height:50px;
+	padding-top:17px;
+	position:absolute;
+	text-align:center;
+	top:17px;
+	right:72px;
+	width:100px;
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+	-moz-box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+	box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+}
+
+.boutonlien.boutonthema{
+	height:60px;
+	width:160px;
+}
+
+.boutonlien.boutonthema.bouton2{
+
+	top:100px;
+}
+
+.listedelib{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+.listedelib div{
+	justify-content:space-between;
+	margin:10px 0;
+	width:50%;
+}
+.listedelib div > *{
+	float:left;
+}
+.listedelib div ul{
+	background:#da7e33;
+	border:1px solid #da7e33;
+	width:25%;
+}
+#content .listedelib div ul li{
+	padding:10px;
+	text-align:center;
+}
+.listedelib div ul li.mois{
+	background:#fff;
+}
+.listedelib div span{
+	margin-top:9%;
+	padding-left:10px;
+	width:75%;
+}
+.listedelib div a{
+	padding:10px;
+	text-align:center;
+
+}
+a[data-type="iframe"]:hover{
+	cursor:pointer;
+}
