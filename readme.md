@@ -19,6 +19,6 @@ Initialisation :
 
 Licence : GNU General Public License v3.0
 
-Liste des dépendances : PHPExcel, Password hashing API
+Liste des dépendances : PHPExcel, Password hashing API, google font Abeezee, Monthly
 
-Langages : HTML, CSS, PHP, jQuery, 
+Langages : HTML, CSS, PHP, jQuery
